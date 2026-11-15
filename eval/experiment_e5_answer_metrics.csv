@@ -1,0 +1,3 @@
+system,correctness,hallucination_rate,correct_refusals,citation_accuracy,mean_t_gen_s
+RAG 128/0 (A-hybrid),0.96,0.0,1.0,1.0,1.83
+RAG 128/32 (B-hybrid),0.96,0.0,1.0,0.92,0.93

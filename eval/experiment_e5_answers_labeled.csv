@@ -1,0 +1,16 @@
+qid,config,answer,pages,t_retr,t_gen,label,citation_ok
+q01,128/32,A value is suspected to be a potential outlier if it is less than (1.5)(IQR) below the first quartile or more than (1.5)(IQR) above the third quartile [p. 23].,23;30;23;55;55;79,0.083,0.925,correct,1
+q02,128/32,The mean is 6.3 and the median is 6.5 [p. 40].,96;67;67;41;40;57,0.04,0.475,correct,1
+q03,128/32,"At supermarket A, the mean waiting time is five minutes and the standard deviation is two minutes [p. 43].",43;44;43;44;44;44,0.064,0.734,correct,0
+q04,128/32,"The mean is 7.7, the median is 7.5, and the mode is 7 [p. 41].",41;36;57;40;70;22,0.056,0.746,correct,1
+q05,128/32,"The interquartile range (IQR) is the range of the middle 50 percent of the data values; the IQR is found by subtracting the first quartile from the third quartile, IQR = Q3 – Q1 [p. 56].",78;56;23;32;80;57,0.029,0.914,correct,1
+q06,128/32,"An outlier is an observation of data that does not fit the rest of the data, sometimes called an extreme value [p. 3].",3;90;24;23;23;3,0.03,0.539,correct,1
+q07,128/32,"Two events are mutually exclusive if the probability that they both happen at the same time is zero, which means P(A AND B) = 0 [p. 136].",136;136;115;137;145;108,0.057,0.685,correct,1
+q08,128/32,"Conditional probability is the likelihood that an event will occur given that another event has already occurred [p. 136]. It is also defined as the probability that event A will occur given that the event B has already occurred, written as P(A|B) [p. 105, p. 136, p. 139].",136;105;136;105;139;139,0.031,1.025,correct,1
+q09,128/32,"Independent and mutually exclusive do not mean the same thing [p. 108]. Independent events are those where the occurrence of one event has no effect on the probability of the occurrence of another event [p. 136], whereas mutually exclusive events are those where the probability that they both happen at the same time is zero [p. 136].",136;136;148;108;148;146,0.028,1.024,partial,1
+q10,128/32,"Quartiles are numbers that separate the data into quarters. The first quartile, Q1, is the middle value of the lower half of the data, and the third quartile, Q3, is the middle value, or median, of the upper half of the data. The IQR is calculated as the difference between the third quartile (Q3) and the first quartile (Q1), which is IQR = Q3 – Q1 [p. 23].",57;23;23;23;24;57,0.028,1.408,correct,1
+q11,128/32,The standard deviation shows how far values typically lie from their average [p. 43].,43;47;101;57;44;56,0.111,0.653,correct,1
+q12,128/32,"We call a table with rows and columns used to show how two variables relate when computing probabilities a ""contingency table"" [p. 136].",136;137;119;136;103;38,0.069,1.193,correct,1
+q13,128/32,NOT IN THE DOCUMENT,,0.07,0.0,refusal_ok,
+q14,128/32,NOT IN THE DOCUMENT,,0.123,0.0,refusal_ok,
+q15,128/32,NOT IN THE DOCUMENT.,56;44;45;45;35;82,0.12,1.772,refusal_ok,
