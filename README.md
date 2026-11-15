@@ -34,7 +34,16 @@ with temperature 0. Embedding models are downloaded from Hugging Face.
     python src/eval_answers.py
 
 ## Prediction
-_(filled in at step 5)_
+- **Best configuration and method for Hit@5:** configuration **B** with **hybrid search (RRF)**.
+  Overlap of 32 tokens reduces the risk that an answer is split by a chunk boundary.
+  Hybrid search combines dense retrieval (paraphrased questions, definitions) with
+  BM25 (exact terms and numbers such as "IQR", "1.5", "P(A AND B)").
+- **BM25 vs dense:** BM25 is expected to be competitive on factual questions with
+  numbers, dense retrieval is expected to win on paraphrased questions.
+- **Expected Hit@5:** about **0.80** for the best system (10 of 12 answerable questions).
+- **Expected refusal threshold:** tau ≈ **0.45**. In trial queries top-1 cosine
+  similarity of relevant chunks was 0.68-0.77; unanswerable questions are close to
+  the topic (statistics), so their top-1 scores are expected around 0.40-0.55.
 
 ## Error analysis and conclusions
 _(filled in at step 9)_

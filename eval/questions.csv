@@ -1,0 +1,16 @@
+qid,question,pages,type,reference_answer
+q01,How far below Q1 or above Q3 must a value be to be a potential outlier?,23,fact,more than 1.5 IQR below Q1 or above Q3
+q02,"In the left-skewed example, what are the mean and the median?",40,fact,"mean 6.3, median 6.5"
+q03,"At supermarket A, what are the mean waiting time and the standard deviation?",44,fact,"mean 5 minutes, standard deviation 2 minutes"
+q04,"For the data 6; 7; 7; 7; 7; 8; 8; 8; 9; 10, what are the mean, median and mode?",41,fact,"mean 7.7, median 7.5, mode 7"
+q05,What is the interquartile range?,23,definition,Q3 minus Q1; the spread of the middle 50% of the data
+q06,What is an outlier?,3,definition,an observation that does not fit the rest of the data (extreme value)
+q07,When are two events mutually exclusive?,110,definition,when they cannot occur at the same time; P(A AND B) = 0
+q08,What is conditional probability?,105,definition,"probability that A occurs given that B has already occurred, P(A|B)"
+q09,What is the difference between independent and mutually exclusive events?,109;110,multipage,"independent: one does not affect the other, P(A AND B) = P(A)P(B); mutually exclusive: cannot occur together, P(A AND B) = 0"
+q10,What are quartiles and how is the IQR calculated from them?,22;23,multipage,"Q1, Q2, Q3 divide ordered data into four equal parts; IQR = Q3 - Q1"
+q11,Which measure shows how far values typically lie from their average?,43,paraphrase,the standard deviation
+q12,What do we call a table with rows and columns used to show how two variables relate when computing probabilities?,119,paraphrase,a contingency table
+q13,What is the formula for the Pearson correlation coefficient?,,unanswerable,
+q14,What is the mean of a binomial distribution?,,unanswerable,
+q15,How is a 95% confidence interval for a population mean constructed?,,unanswerable,
