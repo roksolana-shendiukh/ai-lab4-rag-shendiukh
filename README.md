@@ -1,26 +1,29 @@
-# Лабораторна робота №4. Побудова RAG-рішення на базі LLM
+# Lab 4. Building a Retrieval-Augmented Generation (RAG) Solution with an LLM
 
-- **Студентка:** Shendiukh Roksolana Yaroslavivna
-- **Група:** ПЗ-46
-- **Варіант:** 4
-- **Документ:** Introductory Statistics 2e (OpenStax) —
+- **Student:** Shendiukh Roksolana Yaroslavivna
+- **Group:** PZ-46
+- **Variant:** 4
+- **Document:** Introductory Statistics 2e (OpenStax) -
   https://openstax.org/details/books/introductory-statistics-2e
+- **Fragment:** the book has 847 pages, so Chapters 2-3 (Descriptive Statistics,
+  Probability Topics) are used: book pages 77-238, 162 pages in total.
+  All page numbers in this project refer to data/document.pdf.
 
-## Середовище
-Робота виконується в Databricks (serverless, Python). LLM викликається через
-Databricks Foundation Model API (`databricks-langchain`, `ChatDatabricks`),
-температура 0. Моделі ембедингів завантажуються з Hugging Face.
+## Environment
+The project runs in Databricks (serverless, Python). The LLM is accessed through
+the Databricks Foundation Model API (`databricks-langchain`, `ChatDatabricks`)
+with temperature 0. Embedding models are downloaded from Hugging Face.
 
-## Параметри варіанта
-| Параметр | Значення |
+## Variant parameters
+| Parameter | Value |
 |---|---|
-| Модель ембедингів | sentence-transformers/all-MiniLM-L6-v2 (max_seq_length = 256) |
-| Чанки A | 128 токенів, перекриття 0 |
-| Чанки B | 128 токенів, перекриття 32 |
+| Embedding model | sentence-transformers/all-MiniLM-L6-v2 (max_seq_length = 256) |
+| Chunks A | 128 tokens, overlap 0 |
+| Chunks B | 128 tokens, overlap 32 |
 | LLM | databricks-meta-llama-3-3-70b-instruct |
-| Додатковий експеримент | Е5: перекриття 0 і 25 % |
+| Additional experiment | E5: overlap 0 and 25 % |
 
-## Запуск
+## How to run
 
     pip install -r requirements.txt
     python src/ingest.py
@@ -30,13 +33,13 @@ Databricks Foundation Model API (`databricks-langchain`, `ChatDatabricks`),
     python src/rag.py
     python src/eval_answers.py
 
-## Прогноз
-_(заповнюється на кроці 5)_
+## Prediction
+_(filled in at step 5)_
 
-## Аналіз помилок і висновки
-_(заповнюється на кроці 9)_
+## Error analysis and conclusions
+_(filled in at step 9)_
 
-## Використання ШІ-асистентів
-| № | Інструмент | Крок | Для чого використано | Що перевірено самостійно |
+## Use of AI assistants
+| # | Tool | Step | Purpose | Verified independently |
 |---|---|---|---|---|
-| 1 | Claude (Opus 5.5) | 1 | Налаштування Databricks Git folder, шаблон config.py і README | Параметри звірено з таблицею 6.1 методички |
+| 1 | Claude (Opus 5.5) | 1-2 | Databricks Git folder setup, config.py and README templates | Parameters checked against table 6.1 of the guidelines |

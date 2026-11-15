@@ -4,3 +4,4 @@ index/
 .env
 setup*
 .ipynb_checkpoints/
+data/full_book.pdf
