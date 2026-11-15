@@ -1,0 +1,10 @@
+pypdf
+transformers
+sentence-transformers
+rank_bm25
+pandas
+matplotlib
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+databricks-langchain
