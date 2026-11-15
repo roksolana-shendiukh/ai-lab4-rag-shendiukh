@@ -1,0 +1,3 @@
+mode,correctness,hallucination_rate,correct_refusals,false_refusals,mean_t_gen_s,citation_accuracy
+llm,0.79,0.2,0.0,1,4.5,
+rag,0.96,0.0,1.0,0,1.46,1.0

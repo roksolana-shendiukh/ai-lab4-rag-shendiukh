@@ -1,0 +1,275 @@
+qid,mode,answer,pages,t_retr,t_gen,label,citation_ok
+q01,rag,A value is suspected to be a potential outlier if it is less than (1.5)(IQR) below the first quartile or more than (1.5)(IQR) above the third quartile [p. 23].,23;23;23;57;55;30,0.049,1.09,correct,1
+q01,llm,"A value is considered a potential outlier if it is more than 1.5 times the interquartile range (IQR) below Q1 (the first quartile) or above Q3 (the third quartile).
+
+To be more specific:
+
+* A value is a potential outlier if it is less than Q1 - 1.5*IQR or greater than Q3 + 1.5*IQR.
+
+This is a common rule of thumb used in statistics to identify potential outliers, and it is often referred to as the ""1.5*IQR rule"".",,0.0,2.029,correct,
+q02,rag,The mean is 6.3 and the median is 6.5 [p. 40].,96;41;57;67;41;40,0.041,2.373,correct,1
+q02,llm,"In a left-skewed distribution, the majority of the data points are concentrated on the right side of the distribution, with a longer tail extending to the left.
+
+In this case, the mean is typically pulled to the left, towards the tail, due to the influence of the extreme values. The median, on the other hand, is more resistant to the influence of extreme values and is often closer to the center of the distribution.
+
+So, in a left-skewed distribution:
+
+* The mean is usually less than the median (i.e., it's pulled to the left).
+* The median is often closer to the center of the distribution and is a better representation of the typical value.
+
+For example, let's say we have a left-skewed distribution with the following values: 1, 2, 2, 3, 4, 5, 10. In this case:
+
+* The mean would be around 3.7 (due to the influence of the extreme value 10).
+* The median would be 3 (which is closer to the center of the distribution).
+
+Keep in mind that these are general tendencies, and the actual values of the mean and median can vary depending on the specific distribution.",,0.0,3.795,wrong,
+q03,rag,"At supermarket A, the mean waiting time is five minutes and the standard deviation is two minutes [p. 43, p. 44].",44;43;45;44;53;36,0.027,4.077,correct,1
+q03,llm,"To calculate the mean waiting time and standard deviation at supermarket A, I would need some data on the waiting times. However, since you didn't provide any data, I'll guide you through the general steps to calculate these metrics.
+
+## Step 1: Collect Data on Waiting Times
+To find the mean waiting time and standard deviation, we first need a set of data on waiting times at supermarket A. This could be in the form of minutes or seconds that customers have waited in line.
+
+## Step 2: Calculate the Mean Waiting Time
+The mean waiting time is calculated by summing up all the waiting times and then dividing by the number of observations. If we have waiting times \(t_1, t_2, ..., t_n\), the mean \(\mu\) is given by \(\mu = \frac{t_1 + t_2 + ... + t_n}{n}\).
+
+## Step 3: Calculate the Variance
+To find the standard deviation, we first need to calculate the variance. The variance \(\sigma^2\) is found by taking the average of the squared differences from the mean. For each waiting time \(t_i\), we calculate \((t_i - \mu)^2\), sum these up, and then divide by \(n\) (for population variance) or \(n-1\) (for sample variance).
+
+## Step 4: Calculate the Standard Deviation
+The standard deviation \(\sigma\) is the square root of the variance. So, \(\sigma = \sqrt{\sigma^2}\).
+
+Without specific data on waiting times at supermarket A, we cannot calculate the exact mean waiting time and standard deviation. If you provide the data or more context, I can assist you further with the calculations.",,0.0,4.905,refusal_wrong,
+q04,rag,"The mean is 7.7, the median is 7.5, and the mode is 7 [p. 41].",41;70;40;57;22;66,0.034,3.358,correct,1
+q04,llm,"To find the mean, median, and mode, we'll follow these steps:
+
+1. **Mean**: Add up all the numbers and divide by the total count of numbers.
+   - The sum of the numbers is: 6 + 7 + 7 + 7 + 7 + 8 + 8 + 8 + 9 + 10 = 77
+   - There are 10 numbers in total.
+   - Mean = Sum of all numbers / Total count of numbers = 77 / 10 = 7.7
+
+2. **Median**: Arrange the numbers in ascending order (which is already done in this case) and find the middle number. Since there are 10 numbers (an even count), the median will be the average of the 5th and 6th numbers.
+   - The numbers in order are: 6, 7, 7, 7, 7, 8, 8, 8, 9, 10
+   - The 5th number is 7, and the 6th number is 8.
+   - Median = (7 + 8) / 2 = 15 / 2 = 7.5
+
+3. **Mode**: The mode is the number that appears most frequently.
+   - Looking at the numbers, 7 appears 4 times, which is more than any other number.
+   - Therefore, the mode is 7.
+
+So, for the given data:
+- Mean: 7.7
+- Median: 7.5
+- Mode: 7",,0.0,4.623,correct,
+q05,rag,"The interquartile range (IQR) is the range of the middle 50 percent of the data values; the IQR is found by subtracting the first quartile from the third quartile, IQR = Q3 – Q1 [p. 23].",56;23;24;57;32;32,0.025,1.308,correct,1
+q05,llm,"The interquartile range (IQR) is a statistical measure that represents the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of a dataset. It is a measure of the spread or dispersion of the data, and it is often used to describe the variability of a dataset.
+
+To calculate the IQR, you need to first arrange the data in order from smallest to largest. Then, you find the median (middle value) of the data, which is also known as the 50th percentile (Q2). The 25th percentile (Q1) is the median of the lower half of the data, and the 75th percentile (Q3) is the median of the upper half of the data.
+
+The IQR is calculated as follows:
+
+IQR = Q3 - Q1
+
+The IQR is a useful measure of spread because it is resistant to outliers, which are extreme values that can affect the mean and standard deviation of a dataset. The IQR is also a good indicator of the ""middle 50%"" of the data, which can be useful for understanding the distribution of the data.
+
+For example, if a dataset has a Q1 of 20 and a Q3 of 30, the IQR would be 10. This means that the middle 50% of the data falls within a range of 10 units.
+
+The IQR is often used in conjunction with the median and other statistical measures to understand the distribution of a dataset. It is also used in data visualization, such as in box plots, to provide a graphical representation of the data.",,0.0,5.03,correct,
+q06,rag,"An outlier is an observation of data that does not fit the rest of the data, sometimes called an extreme value [p. 3].",3;23;80;57;90;79,0.051,0.674,correct,1
+q06,llm,"An outlier is a data point that is significantly different from the other data points in a dataset. It is a value that lies outside the normal range of values, often being much higher or lower than the majority of the data. Outliers can be found in any type of data, including numerical, categorical, or time-series data.
+
+Outliers can be caused by various factors, such as:
+
+1. **Measurement errors**: Incorrect or imprecise measurements can result in outliers.
+2. **Data entry errors**: Typos or incorrect data entry can lead to outliers.
+3. **Sampling errors**: Sampling biases or errors can result in outliers.
+4. **Natural variability**: Some datasets may naturally have outliers due to the underlying distribution of the data.
+5. **Anomalies**: Outliers can indicate unusual events or anomalies in the data, such as a sudden change or a rare occurrence.
+
+Outliers can affect statistical analysis and modeling, as they can:
+
+1. **Influence mean and median values**: Outliers can skew the mean and median values, making them less representative of the data.
+2. **Affect variance and standard deviation**: Outliers can increase the variance and standard deviation, making it more difficult to interpret the data.
+3. **Impact model performance**: Outliers can negatively impact the performance of statistical models, such as regression or classification models.
+
+To handle outliers, data analysts and scientists use various techniques, including:
+
+1. **Data cleaning**: Removing or correcting outliers to improve data quality.
+2. **Data transformation**: Transforming the data to reduce the impact of outliers.
+3. **Robust statistical methods**: Using statistical methods that are resistant to outliers, such as the median or interquartile range.
+4. **Outlier detection methods**: Using techniques, such as the Z-score or Modified Z-score, to identify outliers.
+
+It's essential to carefully examine outliers and understand their causes to ensure accurate and reliable analysis and modeling of the data.",,0.0,6.418,correct,
+q07,rag,"Two events are mutually exclusive if the probability that they both happen at the same time is zero, which means P(A AND B) = 0 [p. 136].",136;145;115;110;108;146,0.068,0.807,correct,1
+q07,llm,"Two events are mutually exclusive if they cannot occur at the same time. In other words, if one event occurs, the other event cannot occur. This means that the events have no outcomes in common, and the probability of both events occurring together is zero.
+
+For example:
+
+* Flipping a coin and getting heads or tails are mutually exclusive events, because you can't get both heads and tails at the same time.
+* Rolling a die and getting a 1 or a 6 are mutually exclusive events, because you can't get both a 1 and a 6 on the same roll.
+* Winning a game or losing a game are mutually exclusive events, because you can't win and lose at the same time.
+
+Mutually exclusive events are often denoted as ""A"" and ""B"" such that:
+
+P(A and B) = 0
+
+This means that the probability of both events A and B occurring together is zero.
+
+It's worth noting that mutually exclusive events are different from independent events. Independent events are events where the occurrence of one event does not affect the probability of the other event occurring. Mutually exclusive events, on the other hand, are events where the occurrence of one event prevents the other event from occurring.",,0.0,4.011,correct,
+q08,rag,"Conditional probability is the likelihood that an event will occur given that another event has already occurred [p. 136]. It is also defined as the probability that event A will occur given that event B has already occurred, written as P(A|B) [p. 105].",136;105;111;139;137;122,0.078,1.519,correct,1
+q08,llm,"Conditional probability is a fundamental concept in probability theory that describes the probability of an event occurring given that another event has already occurred. It is a measure of the probability of an event happening in relation to another event, and it is often denoted as P(A|B), which is read as ""the probability of A given B"".
+
+In other words, conditional probability is the probability of an event A occurring, given that event B has occurred. The probability of A is updated based on the knowledge that B has occurred, and this updated probability is called the conditional probability of A given B.
+
+The formula for conditional probability is:
+
+P(A|B) = P(A and B) / P(B)
+
+Where:
+
+* P(A|B) is the conditional probability of A given B
+* P(A and B) is the probability of both A and B occurring
+* P(B) is the probability of B occurring
+
+Conditional probability is used to update the probability of an event based on new information, and it has many applications in fields such as statistics, engineering, economics, and computer science.
+
+Here's an example to illustrate the concept:
+
+Suppose we have a deck of cards, and we want to find the probability of drawing a king given that the first card drawn is a heart. Let's say the probability of drawing a king is 1/13 (since there are 4 kings in a deck of 52 cards), and the probability of drawing a heart is 1/4 (since there are 13 hearts in a deck of 52 cards).
+
+If we draw a heart first, the probability of drawing a king given that the first card is a heart is:
+
+P(King|Heart) = P(King and Heart) / P(Heart)
+= (1/52) / (1/4)
+= 1/13
+
+This means that if we draw a heart first, the probability of drawing a king is still 1/13, since there is only one king of hearts in the deck.
+
+Conditional probability is a powerful tool for making predictions and updating probabilities based on new information, and it has many applications in real-world problems.",,0.0,6.258,correct,
+q09,rag,"Independent and mutually exclusive events do not mean the same thing [p. 108]. Independent events are those where the probability of one event does not affect the probability of the other event, whereas mutually exclusive events are those where the probability that they both happen at the same time is zero [p. 136].",136;108;148;146;110;60,0.027,1.284,partial,1
+q09,llm,"In probability theory, independent and mutually exclusive events are two distinct concepts that are often confused with each other. Here's a clear explanation of the difference:
+
+**Independent Events:**
+Two or more events are said to be independent if the occurrence or non-occurrence of one event does not affect the probability of the occurrence of the other event(s). In other words, the probability of one event happening is not influenced by the outcome of the other event.
+
+Example: Flipping a coin and rolling a die are independent events. The outcome of the coin flip (heads or tails) does not affect the outcome of the die roll (1 to 6), and vice versa.
+
+**Mutually Exclusive Events:**
+Two or more events are said to be mutually exclusive if they cannot occur at the same time. When one event occurs, it prevents the other event(s) from occurring.
+
+Example: Flipping a coin and getting heads or tails are mutually exclusive events. You can either get heads or tails, but not both at the same time.
+
+Key differences:
+
+1. **Probability**: Independent events do not affect each other's probability, while mutually exclusive events affect each other's probability (if one occurs, the other cannot occur).
+2. **Occurrence**: Independent events can occur together, while mutually exclusive events cannot occur together.
+3. **Example**: Independent events can be thought of as separate, unrelated events (e.g., coin flip and die roll), while mutually exclusive events are often related and cannot happen simultaneously (e.g., getting heads or tails on a coin flip).
+
+To illustrate the difference, consider the following:
+
+* If you flip a coin and roll a die, these are independent events. You can get heads and roll a 3, or tails and roll a 6, and so on.
+* If you flip a coin and get heads, you cannot get tails at the same time. These are mutually exclusive events.
+
+In summary, independent events are unrelated and can occur together, while mutually exclusive events are related and cannot occur together.",,0.0,6.472,correct,
+q10,rag,"Quartiles are numbers that separate the data into quarters [p. 23]. The first quartile (Q1) is the 25th percentile, the second quartile (Q2 or median) is the 50th percentile, and the third quartile (Q3) is the 75th percentile [p. 57]. The Interquartile Range (IQR) is calculated by subtracting Q1 from Q3, i.e., IQR = Q3 - Q1 [p. 23]. This represents the range of the middle 50 percent of the data values [p. 57].",57;23;82;32;23;30,0.033,1.827,correct,1
+q10,llm,"Quartiles are values that divide a dataset into four equal parts, each containing 25% of the data. They are used to measure the spread of the data and to identify outliers. The three main quartiles are:
+
+1. **First Quartile (Q1)**: Also known as the lower quartile, it is the value below which 25% of the data falls.
+2. **Second Quartile (Q2)**: Also known as the median, it is the middle value of the dataset, where 50% of the data falls below it and 50% above it.
+3. **Third Quartile (Q3)**: Also known as the upper quartile, it is the value below which 75% of the data falls.
+
+The **Interquartile Range (IQR)** is a measure of the spread of the data, calculated as the difference between the third quartile (Q3) and the first quartile (Q1):
+
+**IQR = Q3 - Q1**
+
+The IQR represents the range of the middle 50% of the data, which is a more robust measure of spread than the traditional range (maximum - minimum), as it is less affected by outliers.
+
+Here's an example to illustrate this:
+
+Suppose we have a dataset with the following values: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+
+To calculate the quartiles, we first need to arrange the data in order (which is already done in this case). Then, we can find the quartiles as follows:
+
+* Q1 (first quartile): 6 (since 25% of the data, or 2.5 values, fall below 6)
+* Q2 (median): 10 (since 50% of the data falls below 10 and 50% above 10)
+* Q3 (third quartile): 14 (since 75% of the data, or 7.5 values, fall below 14)
+
+Now, we can calculate the IQR:
+
+**IQR = Q3 - Q1 = 14 - 6 = 8**
+
+So, the interquartile range (IQR) is 8, which means that the middle 50% of the data falls within a range of 8 units.",,0.0,6.958,correct,
+q11,rag,The standard deviation measures how far data values are from their mean [p. 43].,43;47;44;101;49;43,0.065,3.062,correct,1
+q11,llm,"The measure that shows how far values typically lie from their average is called the **Standard Deviation** or **Variance**. However, a more common and straightforward answer is **Range** or **Standard Deviation**, but the most specific answer is **Standard Deviation**.
+
+In more detail, the Standard Deviation is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the average, while a high standard deviation indicates that the values are spread out over a wider range.
+
+Other measures, such as the **Interquartile Range (IQR)**, **Mean Absolute Deviation (MAD)**, and **Variance**, also describe the spread of a dataset, but Standard Deviation is the most commonly used and widely accepted measure.",,0.0,2.565,partial,
+q12,rag,"We call a table with rows and columns used to show how two variables relate when computing probabilities a ""contingency table"" [p. 136].",136;119;137;136;104;136,0.058,0.546,correct,1
+q12,llm,"A table with rows and columns used to show how two variables relate when computing probabilities is called a **contingency table**. However, in the context of probability, it's more commonly referred to as a **joint probability table** or a **probability table**.
+
+But the most specific and widely used term for this type of table is a **two-way table** or a **2x2 table** (if it has two rows and two columns), and in particular, a **PivotTable** or a **cross-tabulation table**.
+
+In statistics, a contingency table is often used to display the relationship between two categorical variables, and it's a fundamental tool for calculating probabilities, such as conditional probabilities and joint probabilities.
+
+So, to summarize: a table with rows and columns used to show how two variables relate when computing probabilities is commonly called a **contingency table**, **joint probability table**, or a **2x2 table**.",,0.0,2.865,correct,
+q13,rag,NOT IN THE DOCUMENT,,0.026,0.0,refusal_ok,
+q13,llm,"The formula for the Pearson correlation coefficient (ρ) is:
+
+ρ = Σ[(xi - x̄)(yi - ȳ)] / (√Σ(xi - x̄)² * √Σ(yi - ȳ)²)
+
+Where:
+
+* ρ is the Pearson correlation coefficient
+* xi and yi are individual data points
+* x̄ and ȳ are the means of the x and y datasets, respectively
+* Σ denotes the sum of the values
+
+This formula calculates the correlation between two continuous variables, x and y. The result is a value between -1 and 1, where:
+
+* 1 indicates a perfect positive correlation
+* -1 indicates a perfect negative correlation
+* 0 indicates no correlation
+
+Note that this formula assumes a linear relationship between the variables and is sensitive to outliers.",,0.0,2.631,hallucination,
+q14,rag,NOT IN THE DOCUMENT,,0.067,0.0,refusal_ok,
+q14,llm,"The mean (or expected value) of a binomial distribution is given by the formula:
+
+μ = np
+
+where:
+μ = mean
+n = number of trials
+p = probability of success in a single trial
+
+In other words, the mean of a binomial distribution is equal to the number of trials multiplied by the probability of success in each trial. This makes sense intuitively, since if you have a large number of trials with a high probability of success, you would expect to see a large number of successes.
+
+For example, if you flip a coin 10 times (n = 10) and the probability of getting heads is 0.5 (p = 0.5), the mean number of heads you would expect to get is:
+
+μ = np = 10 x 0.5 = 5
+
+So, on average, you would expect to get 5 heads in 10 coin flips.",,0.0,2.71,hallucination,
+q15,rag,NOT IN THE DOCUMENT,,0.06,0.0,refusal_ok,
+q15,llm,"A 95% confidence interval for a population mean is constructed using the following steps:
+
+1. **Collect a random sample**: Collect a random sample of size n from the population. The sample should be representative of the population.
+2. **Calculate the sample mean**: Calculate the sample mean (x̄) of the collected data.
+3. **Calculate the sample standard deviation**: Calculate the sample standard deviation (s) of the collected data.
+4. **Determine the critical value**: Determine the critical value from the standard normal distribution (Z-distribution) or the t-distribution, depending on the sample size. For a 95% confidence interval, the critical value is typically 1.96 for the Z-distribution (for large samples) or t(0.025, n-1) for the t-distribution (for small samples).
+5. **Calculate the margin of error**: Calculate the margin of error (E) using the formula: E = critical value × (s / √n)
+6. **Construct the confidence interval**: Construct the 95% confidence interval using the formula: x̄ - E < μ < x̄ + E
+
+Where:
+- x̄ is the sample mean
+- μ is the population mean
+- E is the margin of error
+- s is the sample standard deviation
+- n is the sample size
+- critical value is the value from the standard normal distribution or the t-distribution
+
+**Note:**
+
+* If the sample size is large (n ≥ 30), you can use the Z-distribution and the critical value 1.96.
+* If the sample size is small (n < 30), you should use the t-distribution and the critical value t(0.025, n-1).
+* If the population standard deviation (σ) is known, you can use it instead of the sample standard deviation (s) to calculate the margin of error.
+
+The resulting confidence interval provides a range of values within which the true population mean is likely to lie, with a 95% probability.",,0.0,6.254,hallucination,
